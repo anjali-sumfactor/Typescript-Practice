@@ -58,10 +58,24 @@ console.log(datas);
 interface userObjType {
     name: string,
     age: number,
+    getName: () => string,
 }
 
 let userObj: userObjType = {
     name: "ankita",
     age: 23,
+    getName: function () {
+        return "ankita roy";
+    }
 }
 console.log(userObj);
+console.log(userObj.getName());
+
+//Functions in typescript:- we can also define type of parameters in a fn
+function Cal(a: number, b?: number): number {
+    return b ? a + b : a;
+}
+console.log(Cal(100, 50));
+
+
+
