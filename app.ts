@@ -77,5 +77,19 @@ function Cal(a: number, b?: number): number {
 }
 console.log(Cal(100, 50));
 
-
+//Classes in typescript:-
+class Login {
+    // name = "john";
+    name;
+    // name: string = "john";
+    constructor(name) {
+        console.log("constructor called");
+        this.name = name;
+    }
+    getName(): string {
+        return (this.name);
+    }
+}
+let x1 = new Login("peter");
+console.log(x1.getName());
 

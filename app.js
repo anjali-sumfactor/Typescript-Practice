@@ -56,3 +56,17 @@ function Cal(a, b) {
     return b ? a + b : a;
 }
 console.log(Cal(100, 50));
+//Classes in typescript:-
+var Login = /** @class */ (function () {
+    // name: string = "john";
+    function Login(name) {
+        console.log("constructor called");
+        this.name = name;
+    }
+    Login.prototype.getName = function () {
+        return (this.name);
+    };
+    return Login;
+}());
+var x1 = new Login("peter");
+console.log(x1.getName());
