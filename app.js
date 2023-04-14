@@ -70,3 +70,15 @@ var Login = /** @class */ (function () {
 }());
 var x1 = new Login("peter");
 console.log(x1.getName());
+//Inheritance in typescript:-
+var Child = /** @class */ (function () {
+    function Child() {
+        this.name = "jerry";
+    }
+    Child.prototype.getName = function () {
+        return this.name;
+    };
+    return Child;
+}());
+var c1 = new Child();
+console.log(c1.getName());
