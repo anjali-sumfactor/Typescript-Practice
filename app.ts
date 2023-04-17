@@ -94,11 +94,42 @@ let x1 = new Login("peter");
 console.log(x1.getName());
 
 //Inheritance in typescript:-
-class Child {
-    name = "jerry"
-    getName() {
+class Parent {
+    name: string;
+    setName(name): void {
+        this.name = name
+    }
+}
+
+class Child extends Parent {
+    // name = "jerry"
+    getName(): string {
         return this.name;
     }
 }
 let c1 = new Child();
+c1.setName("jerry")
 console.log(c1.getName());
+
+//Namespace in typescript:-
+// /// <reference path="./Utils.ts" />
+// namespace UserUtils {
+//     export class Users extends Parent implements userType {
+//         getName() {
+//             return this.name;
+//         }
+//     }
+// }
+// let u1 = new UserUtils.Users();
+// u1.setName("tony");
+// console.log(u1.getName());
+
+//module in typescript:-
+import Slogin from "./Student";
+import Tlogin from "./Teacher";
+
+let teacher = new Tlogin();
+console.log(teacher.data);
+
+let student = new Slogin();
+console.log(student.data);
