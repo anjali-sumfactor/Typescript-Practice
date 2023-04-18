@@ -6,6 +6,42 @@ function linearFunc(arr) {
 const arr = [1, 2, 3, 4, 5, 6];
 linearFunc(arr);
 
+//O(1):-
+function linearFunction(arr) {
+    console.log(1000 * 100000);
+}
+
+//O(n):-
+function linearFunct(a) {
+    for (let i = 0; i < a.length; i++) {
+        console.log(1000 * 100000);
+    }
+}
+const a = [1, 2, 3, 4];
+linearFunct(a);
+
+//O(n^2):-
+function square(n) {
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; i < n; j++) {
+            console.log(i, j);
+        }
+    }
+}
+square(4);
+
+//O(n^3):-
+function cube(n) {
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; i < n; j++) {
+            for (let k = 0; k < n; k++) {
+                console.log(i, j, k);
+            }
+        }
+    }
+}
+cube(8);
+
 //binary search:-
 let array = [];
 let start = 0;
@@ -26,3 +62,14 @@ function binarySearch(array, start, end, target) {
     else return binarySearch(array, midIndex + 1, end, target);
 }
 console.log(binarySearch(array, start, end, target));
+
+//O(nlogn):-
+function nLogFunc(n) {
+    let y = n;
+    while (n > 1) {
+        n = Math.floor(n / 2);
+        for (let i = 0; i <= y; i++) {
+            console.log(i);
+        }
+    }
+}
