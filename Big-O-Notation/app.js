@@ -7,10 +7,15 @@
 // linearFunc(arr);
 
 //binary search:-
-let array = [1, 2, 3, 4, 5, 6, 7, 8];
+let array = [];
 let start = 0;
 let end = array.length - 1;
-let target = 8;
+let target = 100000;
+
+for (let i = 1; i < 1024; i++) {
+    array.push(i);
+}
+// console.log(array);
 
 function binarySearch(array, start, end, target) {
     if (start > end) return false;
