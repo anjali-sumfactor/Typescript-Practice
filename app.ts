@@ -133,3 +133,16 @@ console.log(teacher.data);
 
 let student = new Slogin();
 console.log(student.data);
+
+//generics in typescript:-
+function usersData<T>(data: T): T {
+    return data;
+}
+console.log(usersData({ name: "angel", age: 30 }).age);
+
+//optional properties in typescript:-
+const car: { type: string, mileage?: number } = { // no error
+    type: "Toyota"
+};
+car.mileage = 2000;
+console.log(car);

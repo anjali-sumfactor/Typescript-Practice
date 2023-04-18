@@ -1,13 +1,12 @@
+// namespace UsersUtils {
+//     export class parent {
+//         name: string;
+//         setName(name: string) {
+//             return this.name = name;
+//         }
+//     }
 
-namespace UsersUtils {
-    export class parent {
-        name: string;
-        setName(name: string) {
-            return this.name = name;
-        }
-    }
-
-    export interface userType {
-        getName();
-    }
-}
+//     export interface userType {
+//         getName();
+//     }
+// }

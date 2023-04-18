@@ -127,3 +127,14 @@ var teacher = new Teacher_1.default();
 console.log(teacher.data);
 var student = new Student_1.default();
 console.log(student.data);
+//generics in typescript:-
+function usersData(data) {
+    return data;
+}
+console.log(usersData({ name: "angel", age: 30 }).age);
+//optional properties in typescript:-
+var car = {
+    type: "Toyota"
+};
+car.mileage = 2000;
+console.log(car);
