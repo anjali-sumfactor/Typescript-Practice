@@ -92,7 +92,7 @@ function nLogFunc(n) {
 }
 console.log(nLogFunc(8));
 
-//merge sort:-
+//merge sort:-O(nlogn)
 function mergeSort(arra) {
     if (arra.length < 2) {
         return arra;
@@ -125,3 +125,71 @@ function merge(leftArr, rightArr) {
 let arra = [12, 3, 16, 5, 1];
 console.log(mergeSort(arra));
 
+//O(2^n):- O(2^n-1)
+//fibonnaci:-
+function fibo(n) {
+    if (n === 0) {
+        return 0;
+    }
+    if (n === 1) {
+        return 1;
+    }
+    return fibo(n - 1) + fibo(n - 2);
+}
+console.log(fibo(4));
+
+//O(n!)
+//factorial:-
+function facto(n) {
+    if (n === 0) {
+        console.log("*************");
+        return
+    }
+
+    for (let i = 0; i < n; i++) {
+        facto(n - 1);
+    }
+}
+console.log(facto(3));
+
+//O(n)
+//space complexity:-
+function countDown(n) {
+    if (n === 0) {
+        return;
+    }
+    return countDown(n - 1);
+}
+console.log(countDown(5));
+
+//O(n):-O(n)+O(n)= O(2n) but ignore constant i.e 2 so it's O(n)
+function twoLoops(a) {
+    for (let i = 0; i < a; i++) {
+        //code
+    }
+
+    for (let i = 0; i < a; i++) {
+        //code
+    }
+}
+
+//mistakes:-
+//1.O(a+b):-
+function twoInputAdd(a, b) {
+    for (let i = 0; i < a; i++) {
+        //code
+    }
+
+    for (let i = 0; i < b; i++) {
+        //code
+    }
+}
+
+//2.O(a*b):-
+function twoInputMul(a, b) {
+    for (let i = 0; i < a; i++) {
+        for (let j = 0; j < b; j++) {
+            //code
+        }
+    }
+}
