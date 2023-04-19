@@ -28,7 +28,7 @@ function square(n) {
         }
     }
 }
-square(4);
+// square(4);
 
 //O(n^3):-
 function cube(n) {
@@ -40,13 +40,30 @@ function cube(n) {
         }
     }
 }
-cube(8);
+// cube(8);
+
+//O(logn):-
+//1.recursive:-
+function logFunc(n) {
+    if (n === 0) return "Done";
+    n = Math.floor(n / 2);
+    return logFunc(n);
+}
+
+//2.non-recursive:-
+function log(n) {
+    while (n > 1) {
+        n = Math.floor(n / 2);
+    }
+    return n;
+}
+console.log(log(8));
 
 //binary search:-
 let array = [];
 let start = 0;
 let end = array.length - 1;
-let target = 100000;
+let target = 100;
 
 for (let i = 1; i < 1024; i++) {
     array.push(i);
@@ -73,3 +90,38 @@ function nLogFunc(n) {
         }
     }
 }
+console.log(nLogFunc(8));
+
+//merge sort:-
+function mergeSort(arra) {
+    if (arra.length < 2) {
+        return arra;
+    }
+
+    const middleIndex = Math.floor(arra.length / 2);
+    const leftArr = arra.slice(0, middleIndex);
+    const rightArr = arra.slice(middleIndex, arra.length);
+
+    return merge(mergeSort(leftArr), mergeSort(rightArr));
+}
+
+function merge(leftArr, rightArr) {
+    let resultArr = [];
+    let leftIndex = 0;
+    let rightIndex = 0;
+
+    while (leftIndex < leftArr.length && rightIndex < rightArr.length) {
+        if (leftArr[leftIndex] < rightArr[rightIndex]) {
+            resultArr.push(leftArr[leftIndex]);
+            leftIndex += 1;
+        } else {
+            resultArr.push(rightArr[rightIndex]);
+            rightIndex += 1;
+        }
+    }
+    return resultArr.concat(leftArr.slice(leftIndex)).concat(rightArr.slice(rightIndex));
+}
+
+let arra = [12, 3, 16, 5, 1];
+console.log(mergeSort(arra));
+
