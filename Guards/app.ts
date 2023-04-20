@@ -63,3 +63,13 @@ function buyFruit(fruits: Fruits): number {
 }
 const watermelon = new Watermelon();
 console.log(buyFruit(watermelon));
+
+//4.equality narrowing:-
+function getValues(a: number | string, b: string) {
+    if (a === b) {
+        console.log(a);
+    } else {
+        console.log(a);
+    }
+}
+getValues(40, "world");

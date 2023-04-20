@@ -60,3 +60,13 @@ function buyFruit(fruits) {
 }
 var watermelon = new Watermelon();
 console.log(buyFruit(watermelon));
+//4.equality narrowing:-
+function getValues(a, b) {
+    if (a === b) {
+        console.log(a);
+    }
+    else {
+        console.log(a);
+    }
+}
+getValues(40, "world");
