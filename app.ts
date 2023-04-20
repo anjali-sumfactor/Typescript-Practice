@@ -146,3 +146,4 @@ const car: { type: string, mileage?: number } = { // no error
 };
 car.mileage = 2000;
 console.log(car);
+
