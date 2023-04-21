@@ -1,4 +1,5 @@
-//your code needs ts guards whenever you want to allow only a specific type or a block of code and it can take many different forms such as instant self operators, typeof operator and even user defined type guards.
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 function add(a, b) {
     if (typeof a === "number" && typeof b === "number") {
         return a + b;

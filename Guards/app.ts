@@ -1,5 +1,5 @@
 //your code needs ts guards whenever you want to allow only a specific type or a block of code and it can take many different forms such as instant self operators, typeof operator and even user defined type guards.
-
+export { }
 //1.typeof guard:-
 type alphanumeric = string | number;
 
